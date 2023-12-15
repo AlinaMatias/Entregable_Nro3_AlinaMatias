@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida a MiProyecto</title>
+    <!-- Incluye los estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #6c757d;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #6c757d;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #6c757d;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Agrega el logo aquí -->
+        <h1>{{ mensaje }}</h1>
+
+        <ul>
+            <li><a href="{% url 'crear_cliente' %}" class="btn btn-secondary">Crear Cliente</a></li>
+            <li><a href="{% url 'crear_cuenta' %}" class="btn btn-secondary">Crear Cuenta</a></li>
+            <li><a href="{% url 'realizar_transaccion' %}" class="btn btn-secondary">Realizar Transacción</a></li>
+            <li><a href="{% url 'cliente_lista' %}" class="btn btn-secondary">Lista de Clientes</a></li>
+            <li><a href="{% url 'cuenta_lista' %}" class="btn btn-secondary">Lista de Cuentas</a></li>
+            <li><a href="{% url 'transaccion_lista' %}" class="btn btn-secondary">Lista de Transacciones</a></li>
+        </ul>
+    </div>
+    <!-- Incluye los scripts de Bootstrap y jQuery (asegúrate de tener jQuery instalado) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
